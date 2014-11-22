@@ -27,5 +27,23 @@ class Vsphere::Metrics::Collector
     )
     collector = self.new
     collector.instance_variable_set("@connection", connection)
+    collector
   end # def self.connect
+
+  def counters
+    @counters ||= load_counter_map
+    @counters.values
+  end # def counters
+
+  private
+  def load_counter_map
+    Hash.new.tap do |perf_counter_map|
+      perf_manager = @connection.serviceContent.perfManager
+      perf_manager.perfCounter.each do |counter|
+        counter_name = "#{counter.groupInfo.key}.#{counter.nameInfo.key}.#{counter.rollupType}"
+        perf_counter_map[counter.key] = counter_name
+      end
+    end
+  end # private def load_counter_map
+
 end

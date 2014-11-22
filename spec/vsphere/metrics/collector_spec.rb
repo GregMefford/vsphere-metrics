@@ -39,8 +39,13 @@ describe 'Vsphere::Metrics::Collector' do
       context 'Succeeds with valid credentials', :vcr do
         Then{ expect{ Collector.connect(options) }.to_not raise_error }
       end
-    end # Vsphere::Server.connect
+    end # Vsphere::Metrics::Collector.connect
+
+    describe 'Vsphere::Metrics::Collector.counters', :vcr do
+      Given(:collector){ Collector.connect(options) }
+      Then{ expect(collector.counters).to include('cpu.usage.average') }
+    end # Vsphere::Metrics::Collector.counters
 
   end # Connecting to an ESXi 5.5 host
 
-end # Vsphere::Server
+end # Vsphere::Metrics::Collector
