@@ -31,13 +31,26 @@ class Vsphere::Metrics::Collector
   end # def self.connect
 
   def counters
-    @counters ||= load_counter_map
-    @counters.values
+    counter_map.values
   end # def counters
 
+  def counters_for_type(managed_object_type)
+    view_manager = @connection.serviceContent.viewManager
+    root_folder = @connection.serviceContent.rootFolder
+    inventory_view = view_manager.CreateContainerView( {
+      :container  => root_folder,
+      :type       => [managed_object_type],
+      :recursive  => true,
+    })
+    vm = inventory_view.view[inventory_view.view.find_index{|_| _.runtime.powerState == "poweredOn"}]
+    perf_manager = @connection.serviceContent.perfManager
+    counters = perf_manager.QueryAvailablePerfMetric(:entity => vm)
+    counters.map{ |_| counter_map[_.counterId] }
+  end # def counters_for
+
   private
-  def load_counter_map
-    Hash.new.tap do |perf_counter_map|
+  def counter_map
+    @counter_map ||= Hash.new.tap do |perf_counter_map|
       perf_manager = @connection.serviceContent.perfManager
       perf_manager.perfCounter.each do |counter|
         counter_name = "#{counter.groupInfo.key}.#{counter.nameInfo.key}.#{counter.rollupType}"

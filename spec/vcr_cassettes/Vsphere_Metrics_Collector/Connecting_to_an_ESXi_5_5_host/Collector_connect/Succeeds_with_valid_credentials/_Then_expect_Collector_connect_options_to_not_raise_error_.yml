@@ -25,9 +25,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 22 Nov 2014 04:45:33 GMT
+      - Tue, 25 Nov 2014 04:44:52 GMT
       Set-Cookie:
-      - vmware_soap_session="52dd07ee-6d3a-5bf6-56ab-275436c0047f"; Path=/; HttpOnly;
+      - vmware_soap_session="5279783b-9980-ce59-a6be-b11b09f581d6"; Path=/; HttpOnly;
         Secure;
       Cache-Control:
       - no-cache
@@ -50,7 +50,7 @@ http_interactions:
         </soapenv:Body>
         </soapenv:Envelope>
     http_version: 
-  recorded_at: Sat, 22 Nov 2014 04:45:18 GMT
+  recorded_at: Tue, 25 Nov 2014 04:44:36 GMT
 - request:
     method: post
     uri: https://esxi-5-5/sdk
@@ -65,7 +65,7 @@ http_interactions:
       Soapaction:
       - urn:vim25/4.0
       Cookie:
-      - vmware_soap_session="52dd07ee-6d3a-5bf6-56ab-275436c0047f"; Path=/; HttpOnly;
+      - vmware_soap_session="5279783b-9980-ce59-a6be-b11b09f581d6"; Path=/; HttpOnly;
         Secure;
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -79,7 +79,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 22 Nov 2014 04:45:33 GMT
+      - Tue, 25 Nov 2014 04:44:52 GMT
       Cache-Control:
       - no-cache
       Connection:
@@ -87,7 +87,7 @@ http_interactions:
       Content-Type:
       - text/xml; charset=utf-8
       Content-Length:
-      - '666'
+      - '664'
     body:
       encoding: UTF-8
       string: |-
@@ -97,9 +97,9 @@ http_interactions:
          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <soapenv:Body>
-        <LoginResponse xmlns="urn:vim25"><returnval><key>ab4dd718-2416-9f05-4eed-3a43e25c4694</key><userName>metrics</userName><fullName>ESXi User</fullName><loginTime>1970-01-05T15:49:12.855475Z</loginTime><lastActiveTime>1970-01-05T15:49:12.855475Z</lastActiveTime><locale>en</locale><messageLocale>en</messageLocale></returnval></LoginResponse>
+        <LoginResponse xmlns="urn:vim25"><returnval><key>efe26de6-5876-6e57-6ce7-820c867c0c4f</key><userName>metrics</userName><fullName>ESXi User</fullName><loginTime>1970-01-08T15:48:31.94336Z</loginTime><lastActiveTime>1970-01-08T15:48:31.94336Z</lastActiveTime><locale>en</locale><messageLocale>en</messageLocale></returnval></LoginResponse>
         </soapenv:Body>
         </soapenv:Envelope>
     http_version: 
-  recorded_at: Sat, 22 Nov 2014 04:45:18 GMT
+  recorded_at: Tue, 25 Nov 2014 04:44:37 GMT
 recorded_with: VCR 2.9.3

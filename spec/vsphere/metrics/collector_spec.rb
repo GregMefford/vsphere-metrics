@@ -4,7 +4,7 @@ require "spec_helper"
 
 include Vsphere::Metrics
 
-describe 'Vsphere::Metrics::Collector' do
+describe 'Vsphere::Metrics::Collector', :vcr do
   Given(:options) {
     {
       :hostname => hostname,
@@ -27,7 +27,7 @@ describe 'Vsphere::Metrics::Collector' do
     # 'esxi-5-5' to a VMware host running ESXi 5.5.
     Given(:hostname) { 'esxi-5-5' }
 
-    describe 'Vsphere::Metrics::Collector.connect' do
+    describe 'Collector.connect' do
       context 'Fails to connect if no password is provided' do
         Given(:password) { nil }
         Then{ expect{ Collector.connect(options) }.to raise_error }
@@ -36,16 +36,26 @@ describe 'Vsphere::Metrics::Collector' do
         Given(:username) { nil }
         Then{ expect{ Collector.connect(options) }.to raise_error }
       end
-      context 'Succeeds with valid credentials', :vcr do
+      context 'Succeeds with valid credentials' do
         Then{ expect{ Collector.connect(options) }.to_not raise_error }
       end
-    end # Vsphere::Metrics::Collector.connect
-
-    describe 'Vsphere::Metrics::Collector.counters', :vcr do
-      Given(:collector){ Collector.connect(options) }
-      Then{ expect(collector.counters).to include('cpu.usage.average') }
-    end # Vsphere::Metrics::Collector.counters
+    end # Collector.connect
 
   end # Connecting to an ESXi 5.5 host
+
+  context 'When Connected' do
+    Given(:hostname) { 'esxi-5-5' }
+    Given(:collector){ Collector.connect(options) }
+
+    describe 'Collector.counters' do
+      Then{ expect(collector.counters).to include('cpu.usage.average') }
+    end # Collector.counters
+
+    describe 'Collector.counters_for_type' do
+      Given(:counters) { collector.counters_for_type('VirtualMachine') }
+      Then{ expect(counters).to include('virtualDisk.write.average') }
+    end # Collector.counters_for_type
+
+  end # When Connected
 
 end # Vsphere::Metrics::Collector

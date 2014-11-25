@@ -25,9 +25,9 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 22 Nov 2014 05:14:09 GMT
+      - Tue, 25 Nov 2014 04:44:52 GMT
       Set-Cookie:
-      - vmware_soap_session="52a3837b-b93f-9b57-d08a-e9c485c2aa30"; Path=/; HttpOnly;
+      - vmware_soap_session="52dd00ba-fa6d-0123-3642-29ec5a59b608"; Path=/; HttpOnly;
         Secure;
       Cache-Control:
       - no-cache
@@ -50,7 +50,7 @@ http_interactions:
         </soapenv:Body>
         </soapenv:Envelope>
     http_version: 
-  recorded_at: Sat, 22 Nov 2014 05:13:55 GMT
+  recorded_at: Tue, 25 Nov 2014 04:44:37 GMT
 - request:
     method: post
     uri: https://esxi-5-5/sdk
@@ -65,7 +65,7 @@ http_interactions:
       Soapaction:
       - urn:vim25/4.0
       Cookie:
-      - vmware_soap_session="52a3837b-b93f-9b57-d08a-e9c485c2aa30"; Path=/; HttpOnly;
+      - vmware_soap_session="52dd00ba-fa6d-0123-3642-29ec5a59b608"; Path=/; HttpOnly;
         Secure;
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -79,7 +79,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 22 Nov 2014 05:14:10 GMT
+      - Tue, 25 Nov 2014 04:44:53 GMT
       Cache-Control:
       - no-cache
       Connection:
@@ -97,11 +97,11 @@ http_interactions:
          xmlns:xsd="http://www.w3.org/2001/XMLSchema"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <soapenv:Body>
-        <LoginResponse xmlns="urn:vim25"><returnval><key>0ca22f67-0195-22ac-6cc8-ad40e04c31c3</key><userName>metrics</userName><fullName>ESXi User</fullName><loginTime>1970-01-05T16:17:49.570622Z</loginTime><lastActiveTime>1970-01-05T16:17:49.570622Z</lastActiveTime><locale>en</locale><messageLocale>en</messageLocale></returnval></LoginResponse>
+        <LoginResponse xmlns="urn:vim25"><returnval><key>f7c08e24-89fa-13d4-8c50-19fde60e01bb</key><userName>metrics</userName><fullName>ESXi User</fullName><loginTime>1970-01-08T15:48:32.552556Z</loginTime><lastActiveTime>1970-01-08T15:48:32.552556Z</lastActiveTime><locale>en</locale><messageLocale>en</messageLocale></returnval></LoginResponse>
         </soapenv:Body>
         </soapenv:Envelope>
     http_version: 
-  recorded_at: Sat, 22 Nov 2014 05:13:55 GMT
+  recorded_at: Tue, 25 Nov 2014 04:44:37 GMT
 - request:
     method: post
     uri: https://esxi-5-5/sdk
@@ -116,7 +116,7 @@ http_interactions:
       Soapaction:
       - urn:vim25/5.5
       Cookie:
-      - vmware_soap_session="52a3837b-b93f-9b57-d08a-e9c485c2aa30"; Path=/; HttpOnly;
+      - vmware_soap_session="52dd00ba-fa6d-0123-3642-29ec5a59b608"; Path=/; HttpOnly;
         Secure;
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -130,7 +130,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 22 Nov 2014 05:14:10 GMT
+      - Tue, 25 Nov 2014 04:44:53 GMT
       Cache-Control:
       - no-cache
       Connection:
@@ -152,7 +152,270 @@ http_interactions:
         </soapenv:Body>
         </soapenv:Envelope>
     http_version: 
-  recorded_at: Sat, 22 Nov 2014 05:13:55 GMT
+  recorded_at: Tue, 25 Nov 2014 04:44:37 GMT
+- request:
+    method: post
+    uri: https://esxi-5-5/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><CreateContainerView
+        xmlns="urn:vim25"><_this type="ViewManager">ViewManager</_this><container
+        type="Folder">ha-folder-root</container><type>VirtualMachine</type><recursive>1</recursive></CreateContainerView></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52dd00ba-fa6d-0123-3642-29ec5a59b608"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Nov 2014 04:44:53 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '529'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <CreateContainerViewResponse xmlns="urn:vim25"><returnval type="ContainerView">session[f7c08e24-89fa-13d4-8c50-19fde60e01bb]527e239a-c1f6-ce54-0216-dc491d6e4d2f</returnval></CreateContainerViewResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 25 Nov 2014 04:44:37 GMT
+- request:
+    method: post
+    uri: https://esxi-5-5/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><RetrieveProperties
+        xmlns="urn:vim25"><_this type="PropertyCollector">ha-property-collector</_this><specSet
+        xsi:type="PropertyFilterSpec"><propSet xsi:type="PropertySpec"><type>ContainerView</type><pathSet>view</pathSet></propSet><objectSet
+        xsi:type="ObjectSpec"><obj type="ContainerView">session[f7c08e24-89fa-13d4-8c50-19fde60e01bb]527e239a-c1f6-ce54-0216-dc491d6e4d2f</obj></objectSet></specSet></RetrieveProperties></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52dd00ba-fa6d-0123-3642-29ec5a59b608"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Nov 2014 04:44:53 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1157'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <RetrievePropertiesResponse xmlns="urn:vim25"><returnval><obj type="ContainerView">session[f7c08e24-89fa-13d4-8c50-19fde60e01bb]527e239a-c1f6-ce54-0216-dc491d6e4d2f</obj><propSet><name>view</name><val xsi:type="ArrayOfManagedObjectReference"><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">10</ManagedObjectReference><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">3</ManagedObjectReference><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">7</ManagedObjectReference><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">8</ManagedObjectReference><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">9</ManagedObjectReference></val></propSet></returnval></RetrievePropertiesResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 25 Nov 2014 04:44:37 GMT
+- request:
+    method: post
+    uri: https://esxi-5-5/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><RetrieveProperties
+        xmlns="urn:vim25"><_this type="PropertyCollector">ha-property-collector</_this><specSet
+        xsi:type="PropertyFilterSpec"><propSet xsi:type="PropertySpec"><type>ContainerView</type><pathSet>view</pathSet></propSet><objectSet
+        xsi:type="ObjectSpec"><obj type="ContainerView">session[f7c08e24-89fa-13d4-8c50-19fde60e01bb]527e239a-c1f6-ce54-0216-dc491d6e4d2f</obj></objectSet></specSet></RetrieveProperties></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52dd00ba-fa6d-0123-3642-29ec5a59b608"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Nov 2014 04:44:53 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '1157'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <RetrievePropertiesResponse xmlns="urn:vim25"><returnval><obj type="ContainerView">session[f7c08e24-89fa-13d4-8c50-19fde60e01bb]527e239a-c1f6-ce54-0216-dc491d6e4d2f</obj><propSet><name>view</name><val xsi:type="ArrayOfManagedObjectReference"><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">10</ManagedObjectReference><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">3</ManagedObjectReference><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">7</ManagedObjectReference><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">8</ManagedObjectReference><ManagedObjectReference type="VirtualMachine" xsi:type="ManagedObjectReference">9</ManagedObjectReference></val></propSet></returnval></RetrievePropertiesResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 25 Nov 2014 04:44:37 GMT
+- request:
+    method: post
+    uri: https://esxi-5-5/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><RetrieveProperties
+        xmlns="urn:vim25"><_this type="PropertyCollector">ha-property-collector</_this><specSet
+        xsi:type="PropertyFilterSpec"><propSet xsi:type="PropertySpec"><type>VirtualMachine</type><pathSet>runtime</pathSet></propSet><objectSet
+        xsi:type="ObjectSpec"><obj type="VirtualMachine">10</obj></objectSet></specSet></RetrieveProperties></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52dd00ba-fa6d-0123-3642-29ec5a59b608"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Nov 2014 04:44:53 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '2543'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <RetrievePropertiesResponse xmlns="urn:vim25"><returnval><obj type="VirtualMachine">10</obj><propSet><name>runtime</name><val xsi:type="VirtualMachineRuntimeInfo"><device><runtimeState xsi:type="VirtualMachineDeviceRuntimeInfoVirtualEthernetCardRuntimeState"><vmDirectPathGen2Active>false</vmDirectPathGen2Active><vmDirectPathGen2InactiveReasonOther>vmNptIncompatibleNetwork</vmDirectPathGen2InactiveReasonOther></runtimeState><key>4000</key></device><host type="HostSystem">ha-host</host><connectionState>connected</connectionState><powerState>poweredOn</powerState><faultToleranceState>notConfigured</faultToleranceState><toolsInstallerMounted>false</toolsInstallerMounted><bootTime>2014-11-18T03:04:35.40021Z</bootTime><suspendInterval>0</suspendInterval><memoryOverhead>113528832</memoryOverhead><maxCpuUsage>3723</maxCpuUsage><maxMemoryUsage>4096</maxMemoryUsage><numMksConnections>0</numMksConnections><recordReplayState>inactive</recordReplayState><onlineStandby>false</onlineStandby><consolidationNeeded>false</consolidationNeeded><featureRequirement><key>cpuid.SSE3</key><featureName>cpuid.SSE3</featureName><value>Bool:Min:1</value></featureRequirement><featureRequirement><key>cpuid.SSSE3</key><featureName>cpuid.SSSE3</featureName><value>Bool:Min:1</value></featureRequirement><featureRequirement><key>cpuid.CMPXCHG16B</key><featureName>cpuid.CMPXCHG16B</featureName><value>Bool:Min:1</value></featureRequirement><featureRequirement><key>cpuid.DS</key><featureName>cpuid.DS</featureName><value>Bool:Min:1</value></featureRequirement><featureRequirement><key>cpuid.SS</key><featureName>cpuid.SS</featureName><value>Bool:Min:1</value></featureRequirement><featureRequirement><key>cpuid.LAHF64</key><featureName>cpuid.LAHF64</featureName><value>Bool:Min:1</value></featureRequirement><featureRequirement><key>cpuid.NX</key><featureName>cpuid.NX</featureName><value>Bool:Min:1</value></featureRequirement><featureRequirement><key>cpuid.LM</key><featureName>cpuid.LM</featureName><value>Bool:Min:1</value></featureRequirement><featureRequirement><key>cpuid.Intel</key><featureName>cpuid.Intel</featureName><value>Bool:Min:1</value></featureRequirement></val></propSet></returnval></RetrievePropertiesResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 25 Nov 2014 04:44:37 GMT
+- request:
+    method: post
+    uri: https://esxi-5-5/sdk
+    body:
+      encoding: UTF-8
+      string: <env:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><env:Body><QueryAvailablePerfMetric
+        xmlns="urn:vim25"><_this type="PerformanceManager">ha-perfmgr</_this><entity
+        type="VirtualMachine">10</entity></QueryAvailablePerfMetric></env:Body></env:Envelope>
+    headers:
+      Content-Type:
+      - text/xml; charset=utf-8
+      Soapaction:
+      - urn:vim25/5.5
+      Cookie:
+      - vmware_soap_session="52dd00ba-fa6d-0123-3642-29ec5a59b608"; Path=/; HttpOnly;
+        Secure;
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 25 Nov 2014 04:44:53 GMT
+      Cache-Control:
+      - no-cache
+      Connection:
+      - Keep-Alive
+      Content-Type:
+      - text/xml; charset=utf-8
+      Content-Length:
+      - '13338'
+    body:
+      encoding: UTF-8
+      string: |-
+        <?xml version="1.0" encoding="UTF-8"?>
+        <soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+         xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <soapenv:Body>
+        <QueryAvailablePerfMetricResponse xmlns="urn:vim25"><returnval><counterId>131079</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>589827</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>65627</counterId><instance></instance></returnval><returnval><counterId>65623</counterId><instance></instance></returnval><returnval><counterId>65591</counterId><instance></instance></returnval><returnval><counterId>1</counterId><instance></instance></returnval><returnval><counterId>196618</counterId><instance>4000</instance></returnval><returnval><counterId>11</counterId><instance>0</instance></returnval><returnval><counterId>11</counterId><instance>1</instance></returnval><returnval><counterId>9</counterId><instance></instance></returnval><returnval><counterId>27</counterId><instance></instance></returnval><returnval><counterId>11</counterId><instance></instance></returnval><returnval><counterId>589836</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>589827</counterId><instance></instance></returnval><returnval><counterId>28</counterId><instance></instance></returnval><returnval><counterId>589838</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>196620</counterId><instance>4000</instance></returnval><returnval><counterId>27</counterId><instance>0</instance></returnval><returnval><counterId>655361</counterId><instance>52c0b39b-4cdd7cc8-9e7d-001c23c61bcf</instance></returnval><returnval><counterId>13</counterId><instance>0</instance></returnval><returnval><counterId>13</counterId><instance>1</instance></returnval><returnval><counterId>29</counterId><instance></instance></returnval><returnval><counterId>131095</counterId><instance></instance></returnval><returnval><counterId>27</counterId><instance>1</instance></returnval><returnval><counterId>29</counterId><instance>1</instance></returnval><returnval><counterId>29</counterId><instance>0</instance></returnval><returnval><counterId>589840</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>196615</counterId><instance>vmnic0</instance></returnval><returnval><counterId>196623</counterId><instance>4000</instance></returnval><returnval><counterId>196615</counterId><instance>vmnic1</instance></returnval><returnval><counterId>30</counterId><instance>1</instance></returnval><returnval><counterId>30</counterId><instance>0</instance></returnval><returnval><counterId>589832</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>655379</counterId><instance></instance></returnval><returnval><counterId>327687</counterId><instance></instance></returnval><returnval><counterId>196613</counterId><instance></instance></returnval><returnval><counterId>65634</counterId><instance></instance></returnval><returnval><counterId>65582</counterId><instance></instance></returnval><returnval><counterId>13</counterId><instance></instance></returnval><returnval><counterId>25</counterId><instance></instance></returnval><returnval><counterId>589839</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>131076</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>65545</counterId><instance></instance></returnval><returnval><counterId>196614</counterId><instance>vmnic0</instance></returnval><returnval><counterId>196614</counterId><instance>vmnic1</instance></returnval><returnval><counterId>196613</counterId><instance>4000</instance></returnval><returnval><counterId>24</counterId><instance></instance></returnval><returnval><counterId>131077</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>65549</counterId><instance></instance></returnval><returnval><counterId>589829</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>655362</counterId><instance>52c0b39b-4cdd7cc8-9e7d-001c23c61bcf</instance></returnval><returnval><counterId>327696</counterId><instance></instance></returnval><returnval><counterId>65629</counterId><instance></instance></returnval><returnval><counterId>327686</counterId><instance></instance></returnval><returnval><counterId>65635</counterId><instance></instance></returnval><returnval><counterId>65620</counterId><instance></instance></returnval><returnval><counterId>589824</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>65624</counterId><instance></instance></returnval><returnval><counterId>131080</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>31</counterId><instance></instance></returnval><returnval><counterId>655365</counterId><instance>52c0b39b-4cdd7cc8-9e7d-001c23c61bcf</instance></returnval><returnval><counterId>196617</counterId><instance></instance></returnval><returnval><counterId>10</counterId><instance>1</instance></returnval><returnval><counterId>196613</counterId><instance>vmnic1</instance></returnval><returnval><counterId>65626</counterId><instance></instance></returnval><returnval><counterId>196613</counterId><instance>vmnic0</instance></returnval><returnval><counterId>10</counterId><instance>0</instance></returnval><returnval><counterId>327685</counterId><instance></instance></returnval><returnval><counterId>196623</counterId><instance></instance></returnval><returnval><counterId>196619</counterId><instance>4000</instance></returnval><returnval><counterId>196618</counterId><instance></instance></returnval><returnval><counterId>327682</counterId><instance></instance></returnval><returnval><counterId>327690</counterId><instance></instance></returnval><returnval><counterId>65603</counterId><instance></instance></returnval><returnval><counterId>28</counterId><instance>1</instance></returnval><returnval><counterId>327692</counterId><instance></instance></returnval><returnval><counterId>720898</counterId><instance></instance></returnval><returnval><counterId>10</counterId><instance></instance></returnval><returnval><counterId>26</counterId><instance></instance></returnval><returnval><counterId>65621</counterId><instance></instance></returnval><returnval><counterId>262145</counterId><instance></instance></returnval><returnval><counterId>65607</counterId><instance></instance></returnval><returnval><counterId>327681</counterId><instance></instance></returnval><returnval><counterId>196620</counterId><instance></instance></returnval><returnval><counterId>28</counterId><instance>0</instance></returnval><returnval><counterId>65628</counterId><instance></instance></returnval><returnval><counterId>196612</counterId><instance>4000</instance></returnval><returnval><counterId>262144</counterId><instance></instance></returnval><returnval><counterId>65618</counterId><instance></instance></returnval><returnval><counterId>196615</counterId><instance></instance></returnval><returnval><counterId>65632</counterId><instance></instance></returnval><returnval><counterId>196612</counterId><instance>vmnic0</instance></returnval><returnval><counterId>30</counterId><instance></instance></returnval><returnval><counterId>196612</counterId><instance>vmnic1</instance></returnval><returnval><counterId>196622</counterId><instance>4000</instance></returnval><returnval><counterId>65586</counterId><instance></instance></returnval><returnval><counterId>12</counterId><instance>1</instance></returnval><returnval><counterId>12</counterId><instance>0</instance></returnval><returnval><counterId>196618</counterId><instance>vmnic0</instance></returnval><returnval><counterId>196618</counterId><instance>vmnic1</instance></returnval><returnval><counterId>327684</counterId><instance></instance></returnval><returnval><counterId>131079</counterId><instance></instance></returnval><returnval><counterId>196614</counterId><instance>4000</instance></returnval><returnval><counterId>196615</counterId><instance>4000</instance></returnval><returnval><counterId>9</counterId><instance>0</instance></returnval><returnval><counterId>131073</counterId><instance></instance></returnval><returnval><counterId>9</counterId><instance>1</instance></returnval><returnval><counterId>720896</counterId><instance></instance></returnval><returnval><counterId>65611</counterId><instance></instance></returnval><returnval><counterId>65553</counterId><instance></instance></returnval><returnval><counterId>131081</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>65599</counterId><instance></instance></returnval><returnval><counterId>655363</counterId><instance>52c0b39b-4cdd7cc8-9e7d-001c23c61bcf</instance></returnval><returnval><counterId>196609</counterId><instance></instance></returnval><returnval><counterId>131099</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>196612</counterId><instance></instance></returnval><returnval><counterId>131078</counterId><instance></instance></returnval><returnval><counterId>65622</counterId><instance></instance></returnval><returnval><counterId>327688</counterId><instance></instance></returnval><returnval><counterId>65595</counterId><instance></instance></returnval><returnval><counterId>196619</counterId><instance>vmnic0</instance></returnval><returnval><counterId>65633</counterId><instance></instance></returnval><returnval><counterId>196619</counterId><instance>vmnic1</instance></returnval><returnval><counterId>262170</counterId><instance></instance></returnval><returnval><counterId>589826</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>14</counterId><instance>1</instance></returnval><returnval><counterId>14</counterId><instance>0</instance></returnval><returnval><counterId>14</counterId><instance></instance></returnval><returnval><counterId>655364</counterId><instance>52c0b39b-4cdd7cc8-9e7d-001c23c61bcf</instance></returnval><returnval><counterId>655360</counterId><instance>52c0b39b-4cdd7cc8-9e7d-001c23c61bcf</instance></returnval><returnval><counterId>196609</counterId><instance>4000</instance></returnval><returnval><counterId>5</counterId><instance>1</instance></returnval><returnval><counterId>131082</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>5</counterId><instance>0</instance></returnval><returnval><counterId>196617</counterId><instance>4000</instance></returnval><returnval><counterId>196621</counterId><instance>4000</instance></returnval><returnval><counterId>589835</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>589834</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>65619</counterId><instance></instance></returnval><returnval><counterId>327695</counterId><instance></instance></returnval><returnval><counterId>327680</counterId><instance></instance></returnval><returnval><counterId>12</counterId><instance></instance></returnval><returnval><counterId>589828</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>196609</counterId><instance>vmnic0</instance></returnval><returnval><counterId>589837</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>131097</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>196609</counterId><instance>vmnic1</instance></returnval><returnval><counterId>196616</counterId><instance>4000</instance></returnval><returnval><counterId>196622</counterId><instance></instance></returnval><returnval><counterId>327693</counterId><instance></instance></returnval><returnval><counterId>196616</counterId><instance></instance></returnval><returnval><counterId>196619</counterId><instance></instance></returnval><returnval><counterId>65541</counterId><instance></instance></returnval><returnval><counterId>131098</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>327691</counterId><instance></instance></returnval><returnval><counterId>589831</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>196614</counterId><instance></instance></returnval><returnval><counterId>589825</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>327689</counterId><instance></instance></returnval><returnval><counterId>589833</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>327694</counterId><instance></instance></returnval><returnval><counterId>589830</counterId><instance>scsi0:0</instance></returnval><returnval><counterId>65537</counterId><instance></instance></returnval><returnval><counterId>327683</counterId><instance></instance></returnval><returnval><counterId>131078</counterId><instance>naa.6001c230c88dc5001a534c59dbcbed9b</instance></returnval><returnval><counterId>589826</counterId><instance></instance></returnval><returnval><counterId>196621</counterId><instance></instance></returnval><returnval><counterId>5</counterId><instance></instance></returnval></QueryAvailablePerfMetricResponse>
+        </soapenv:Body>
+        </soapenv:Envelope>
+    http_version: 
+  recorded_at: Tue, 25 Nov 2014 04:44:37 GMT
 - request:
     method: post
     uri: https://esxi-5-5/sdk
@@ -169,7 +432,7 @@ http_interactions:
       Soapaction:
       - urn:vim25/5.5
       Cookie:
-      - vmware_soap_session="52a3837b-b93f-9b57-d08a-e9c485c2aa30"; Path=/; HttpOnly;
+      - vmware_soap_session="52dd00ba-fa6d-0123-3642-29ec5a59b608"; Path=/; HttpOnly;
         Secure;
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -183,7 +446,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 22 Nov 2014 05:14:10 GMT
+      - Tue, 25 Nov 2014 04:44:53 GMT
       Cache-Control:
       - no-cache
       Connection:
@@ -205,5 +468,5 @@ http_interactions:
         </soapenv:Body>
         </soapenv:Envelope>
     http_version: 
-  recorded_at: Sat, 22 Nov 2014 05:13:55 GMT
+  recorded_at: Tue, 25 Nov 2014 04:44:38 GMT
 recorded_with: VCR 2.9.3
